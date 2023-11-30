@@ -70,25 +70,23 @@ const GameScreen = ({ userNumber, onGameOver }) => {
     <View style={styles.screen}>
       <Title>Opponent's Guess</Title>
       <NumberContainer>{currentGuess}</NumberContainer>
-      <View>
-        <Card>
-          <InstructionText style={styles.instructionText}>
-            Higher or lower?
-          </InstructionText>
-          <View style={styles.buttonsContainer}>
-            <View style={styles.buttonContainer}>
-              <PrimaryButton onPress={() => nextGuessHandler("lower")}>
-                <Ionicons name="md-remove" size={24} color="white" />
-              </PrimaryButton>
-            </View>
-            <View style={styles.buttonContainer}>
-              <PrimaryButton onPress={() => nextGuessHandler("higher")}>
-                <Ionicons name="md-add" size={24} color="white" />
-              </PrimaryButton>
-            </View>
+      <Card>
+        <InstructionText style={styles.instructionText}>
+          Higher or lower?
+        </InstructionText>
+        <View style={styles.buttonsContainer}>
+          <View style={styles.buttonContainer}>
+            <PrimaryButton onPress={() => nextGuessHandler("lower")}>
+              <Ionicons name="md-remove" size={24} color="white" />
+            </PrimaryButton>
           </View>
-        </Card>
-      </View>
+          <View style={styles.buttonContainer}>
+            <PrimaryButton onPress={() => nextGuessHandler("higher")}>
+              <Ionicons name="md-add" size={24} color="white" />
+            </PrimaryButton>
+          </View>
+        </View>
+      </Card>
       <View style={styles.listContainer}>
         <FlatList
           data={guessRounds}
@@ -109,6 +107,7 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 24,
+    alignItems: "center",
   },
   buttonsContainer: {
     flexDirection: "row",
