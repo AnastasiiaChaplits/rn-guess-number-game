@@ -18,7 +18,6 @@ export default function App() {
   };
 
   const gameOverHandler = () => {
-    console.log("called");
     setGameIsOver(true);
   };
 
