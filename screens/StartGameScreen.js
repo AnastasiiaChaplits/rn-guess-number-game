@@ -32,7 +32,7 @@ const StartGameScreen = ({ onPickNumber }) => {
       return;
     }
 
-    onPickNumber(enteredNumber);
+    onPickNumber(chosenNumber);
   };
 
   return (
@@ -48,7 +48,7 @@ const StartGameScreen = ({ onPickNumber }) => {
       />
       <View style={styles.buttonsContainer}>
         <View style={styles.buttonContainer}>
-          <PrimaryButton>Reset</PrimaryButton>
+          <PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
         </View>
         <View style={styles.buttonContainer}>
           <PrimaryButton onPress={confirmInputHandler}>Confirm</PrimaryButton>
